@@ -21,6 +21,7 @@
 		A2DD0ADD199214EE001D31CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2DD0ABF199214EE001D31CE /* UIKit.framework */; };
 		A2DD0AE5199214EE001D31CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A2DD0AE3199214EE001D31CE /* InfoPlist.strings */; };
 		A2DD0AE7199214EE001D31CE /* JS_Call_OCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DD0AE6199214EE001D31CE /* JS_Call_OCTests.m */; };
+		A2DD0AF119921588001D31CE /* demo.html in Resources */ = {isa = PBXBuildFile; fileRef = A2DD0AF019921588001D31CE /* demo.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		A2DD0AE2199214EE001D31CE /* JS-Call-OCTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JS-Call-OCTests-Info.plist"; sourceTree = "<group>"; };
 		A2DD0AE4199214EE001D31CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A2DD0AE6199214EE001D31CE /* JS_Call_OCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JS_Call_OCTests.m; sourceTree = "<group>"; };
+		A2DD0AF019921588001D31CE /* demo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = demo.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				A2DD0ACD199214EE001D31CE /* Main.storyboard */,
 				A2DD0AD0199214EE001D31CE /* ViewController.h */,
 				A2DD0AD1199214EE001D31CE /* ViewController.m */,
+				A2DD0AF019921588001D31CE /* demo.html */,
 				A2DD0AD3199214EE001D31CE /* Images.xcassets */,
 				A2DD0AC2199214EE001D31CE /* Supporting Files */,
 			);
@@ -229,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2DD0AD4199214EE001D31CE /* Images.xcassets in Resources */,
+				A2DD0AF119921588001D31CE /* demo.html in Resources */,
 				A2DD0AC6199214EE001D31CE /* InfoPlist.strings in Resources */,
 				A2DD0ACF199214EE001D31CE /* Main.storyboard in Resources */,
 			);

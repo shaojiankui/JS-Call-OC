@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+- (IBAction)reload:(id)sender;
+@property (weak, nonatomic) IBOutlet UIWebView *myWebView;
 
 @end
