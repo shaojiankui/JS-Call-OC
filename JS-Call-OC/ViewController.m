@@ -38,7 +38,11 @@
     //NSLog(@"decodestring%@",[self decodeString:encodestring]);
     [self loadHtml:@"demo"];
 }
-
+- (void)webViewDidFinishLoad: (UIWebView *) webView
+{
+    //重定义web的alert方法,捕获webview弹出的原生alert  可以修改标题和内容等等
+    [webView stringByEvaluatingJavaScriptFromString:@"window.alert = function(message) { window.location = \"myapp:&func=alert&message=\" + message; }"];
+}
 #pragma mark --
 #pragma mark UIWebViewDelegate
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {

@@ -24,7 +24,10 @@
         stack["second"] = "second";
         stack["third"]  = new Date();
     	callOC("callFunc",stack);
-	} 
+	}
+    function testAlert(){
+        alert("捕获了webview的alert");
+    }
 </script>
 </head>
 <body>
@@ -37,6 +40,9 @@
 <input type="button" value="add个view" onclick="callOC('addSubView',{'view':'UIWebView','tag':'11111','urlstring':'http://www.baidu.com','frame':'{{0,150},{320,300}}'})" />
 
 <input type="button" value="传个字典" onclick="callOC('testFunc',{'param1':76,'param2':155,'param3':76})" />
+
+
+<input type="button" value="捕获修改原生alert" onclick="testAlert()" />
 
 </body>
 </html>
