@@ -6,7 +6,7 @@
 
 	<title></title>
 <script type="text/javascript">
-    
+    //方法2 直接改变当前页面的url 这种方法在电脑浏览器中会直接跳转,在手机中正常
     function callOC(func,param){
         var url= "myapp:" + "&func=" + func;
         for(var i in param)
@@ -17,6 +17,20 @@
         }
         document.location = url;
         //document.location="myapp:func&param1=value1&param2=value2...".
+    }
+    //方法2 动态添加个iframe改变其地址 最后删除,这种方法不会使当前页面跳转 效果更佳
+    function callOC2(func,param){
+        var iframe = document.createElement("iframe");
+        var url= "myapp:" + "&func=" + func;
+        for(var i in param)
+        {
+            url = url + "&" + i + "=" + param[i];
+        }
+        iframe.src = url;
+        iframe.style.display = 'none';
+        document.body.appendChild(iframe);
+        iframe.parentNode.removeChild(iFrame);
+        iframe = null;
     }
 	function callFunc(){
         var stack = new Array();
@@ -31,7 +45,7 @@
 </script>
 </head>
 <body>
-
+方法1<br>
 <input type="text"/>
 <input type="button" value="js callFunc" onclick="callFunc()" />
 
@@ -43,6 +57,17 @@
 
 
 <input type="button" value="捕获修改原生alert" onclick="testAlert()" />
+
+<hr>
+方法2<br>
+<input type="text"/>
+
+<input type="button" value="打个招呼" onclick="callOC2('alert',{'message':'你好么'})" />
+
+<input type="button" value="add个view" onclick="callOC2('addSubView',{'view':'UIWebView','tag':'11111','urlstring':'http://www.baidu.com','frame':'{{0,250},{320,300}}'})" />
+
+<input type="button" value="传个字典" onclick="callOC2('testFunc',{'param1':76,'param2':155,'param3':76})" />
+
 
 </body>
 </html>
