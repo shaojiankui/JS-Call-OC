@@ -45,6 +45,13 @@
 }
 #pragma mark --
 #pragma mark UIWebViewDelegate
+/*
+ * 方法的返回值是BOOL值。
+ * 返回YES：表示让浏览器执行默认操作，比如某个a链接跳转
+ * 返回NO：表示不执行浏览器的默认操作，这里因为通过url协议来判断js执行native的操作，肯定不是浏览器默认操作，故返回NO
+ *
+ */
+
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
 
     NSString *requestString = [[[request URL]  absoluteString] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding ];
@@ -93,6 +100,7 @@
   
         }
         
+        return NO;
         
         
     }
